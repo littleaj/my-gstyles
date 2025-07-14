@@ -21,5 +21,8 @@
     ".git/{index,*refs,*HEAD}",
     ".vscode",
     ".vscode-insiders"
+  ],
+  "cSpell.words": [
+    "gstyles"
   ]
 }
