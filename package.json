@@ -1,0 +1,22 @@
+{
+  "name": "my-gstyles",
+  "version": "0.0.0",
+  "description": "Maintains default and custom styles across sheets and docs.",
+  "keywords": [
+    "google-apps-script",
+    "styles",
+    "google-sheets",
+    "google-docs"
+  ],
+  "license": "MIT",
+  "author": "Arthur Little <1690572+littleaj@users.noreply.github.com>",
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/google-apps-script": "^1.0.97",
+    "@types/gulp": "^4.0.17",
+    "gulp": "^5.0.1"
+  }
+}
