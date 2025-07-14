@@ -12,7 +12,8 @@
   "author": "Arthur Little <1690572+littleaj@users.noreply.github.com>",
   "type": "module",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "gulp build"
   },
   "devDependencies": {
     "@types/google-apps-script": "^1.0.97",
