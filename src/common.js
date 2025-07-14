@@ -16,4 +16,5 @@ function onInstall(e) {
  * @returns {GoogleAppsScript.Card_Service.Card[]}
  */
 function onCommonHomepage(e) {
+  return [getStylesCard()];
 }
