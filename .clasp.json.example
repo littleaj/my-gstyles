@@ -3,7 +3,8 @@
   "scriptId": "---------------------YOUR SCRIPT ID----------------------",
   "rootDir": "project",
   "scriptExtensions": [
-    ".js"
+    ".js",
+    ".gs"
   ],
   "htmlExtensions": [
     ".html"
