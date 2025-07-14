@@ -11,6 +11,9 @@ function onInstall(e) {
   // TODO
 }
 
-function buildCommonHomepage(e) {
-  // TODO
+/**
+ * @param {HomepageEventObject} e
+ * @returns {GoogleAppsScript.Card_Service.Card[]}
+ */
+function onCommonHomepage(e) {
 }

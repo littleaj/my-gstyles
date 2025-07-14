@@ -11,9 +11,7 @@
  * @param {HomepageEventObject} e
  * @returns {GoogleAppsScript.Card_Service.Card[]}
  */
-function buildSheetsHomepage(e) {
-  CardService.newCardBuilder()
-
+function onSheetsHomepage(e) {
 }
 
 function onSheetsOpen(e) {
