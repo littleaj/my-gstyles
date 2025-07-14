@@ -13,7 +13,8 @@
   "type": "module",
   "scripts": {
     "test": "jest",
-    "build": "gulp build"
+    "build": "gulp",
+    "push": "clasp push"
   },
   "devDependencies": {
     "@types/google-apps-script": "^1.0.97",
