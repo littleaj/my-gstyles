@@ -1,0 +1,25 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "**/*/appscript.json"
+      ],
+      "url": "https://json.schemastore.org/appsscript.json"
+    }
+  ],
+  "files.readonlyInclude": {
+    "project/**": true
+  },
+  "cSpell.ignorePaths": [
+    "package-lock.json",
+    "package.json",
+    "src/appscript.json",
+    "project",
+    "node_modules",
+    "vscode-extension",
+    ".git/{info,lfs,logs,refs,objects}/**",
+    ".git/{index,*refs,*HEAD}",
+    ".vscode",
+    ".vscode-insiders"
+  ]
+}
