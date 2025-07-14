@@ -13,7 +13,7 @@
   "type": "module",
   "scripts": {
     "test": "jest",
-    "build": "gulp",
+    "build": "gulp build",
     "push": "clasp push"
   },
   "devDependencies": {
