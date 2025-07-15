@@ -8,7 +8,8 @@
 
 
 function onInstall(e) {
-  // TODO
+  // TODO initialize styles storage
+  // TODO add example styles: code, blockquote
 }
 
 /**
