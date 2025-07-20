@@ -7,20 +7,25 @@
 
 
 
-
+/**
+ * @interface
+ */
 class StylesStorage {
-  constructor(prefix) {
-    this._prefix = prefix;
+
+  put(style) {
+    throw new NotImplementedError();
   }
 
-  /**
-   * @private
-   */
-  _updateIndex(name, prop) {
-    // TODO
+  delete(id) {
+    throw new NotImplementedError();
   }
 
-  add(style) {
-    // TODO
+  get(id) {
+    throw new NotImplementedError();
   }
+
+  list() {
+    throw new NotImplementedError();
+  }
+
 }
