@@ -14,7 +14,7 @@
   "scripts": {
     "test": "jest",
     "build": "gulp",
-    "push": "clasp push"
+    "push": "clasp push -f"
   },
   "devDependencies": {
     "@types/del": "^3.0.1",
