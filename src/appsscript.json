@@ -1,4 +1,5 @@
 {
+  "$schema": "http://json.schemastore.org/appsscript",
   "timeZone": "America/New_York",
   "dependencies": {},
   "exceptionLogging": "STACKDRIVER",
