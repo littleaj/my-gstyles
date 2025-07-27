@@ -1,11 +1,15 @@
 
 function getStylesCard() {
-  // TODO finish implementing this card
-  const sectionStyles = CardService.newCardSection()
-    .setHeader("My gStyles")
-    .setCollapsible(false);
+  const cardBuilder = CardService.newCardBuilder();
 
-  return CardService.newCardBuilder()
-    .addSection(sectionStyles)
-    .build();
+  cardBuilder.addSection(CardService.newCardSection()
+    .setHeader(CardService.newCardHeader().setTitle("Hello!"))
+    .addWidget(CardService.newTextParagraph().setText("Hello, World!"))
+    .setCollapsible(false));
+
+  cardBuilder.setHeader(CardService.newCardHeader()
+    .setTitle("My-gStyles")
+    .setSubtitle("Styles for your Google Apps"));
+
+  return cardBuilder.build();
 }

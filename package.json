@@ -13,12 +13,14 @@
   "type": "module",
   "scripts": {
     "test": "jest",
-    "build": "gulp build",
+    "build": "gulp",
     "push": "clasp push"
   },
   "devDependencies": {
+    "@types/del": "^3.0.1",
     "@types/google-apps-script": "^1.0.97",
     "@types/gulp": "^4.0.17",
+    "del": "^8.0.0",
     "gulp": "^5.0.1",
     "jest": "^30.0.4"
   }
