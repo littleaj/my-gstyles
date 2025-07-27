@@ -2,7 +2,7 @@
   "json.schemas": [
     {
       "fileMatch": [
-        "**/*/appscript.json"
+        "**/appscript.json"
       ],
       "url": "https://json.schemastore.org/appsscript.json"
     }
