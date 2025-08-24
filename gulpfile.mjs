@@ -23,7 +23,7 @@ async function transformManifest() {
 }
 
 async function copySource() {
-  src([`${sourceDir}/**/*`, `!${sourceDir}/${manifestFilename}`])
+  src([`${sourceDir}/**/*`, `!${sourceDir}/${manifestFilename}`, `!${sourceDir}/@types/**`])
     .pipe(dest(outputDir));
 }
 
