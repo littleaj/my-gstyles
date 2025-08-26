@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My gStyles</title>
+    <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+    <script>
+      async function getStyles() {
+        return new Promise((resolve, reject) => google.script.run
+          .withSuccessHandler(function(response) {
+            console.log("getStylesJson response:", response);
+            resolve(response);
+          })
+          .withFailureHandler(reject)
+          .getStylesJson());
+      }
+
+      async function renderStyleList() {
+        try {
+          const styles = await getStyles();
+          // TODO
+          $("#styles-list").html("");
+        } catch (e) {
+          console.error("Error in getStyles: ", e);
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", getStyles);
+    </script>
+  </head>
+  <body>
+    <template id="style-item-template">
+      <div class="style-item">
+        <p class="style-name"></p>
+        <p class="style-preview"></p>
+        <button><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAtOTYwIDk2MCA5NjAiIHdpZHRoPSIyNHB4IiBmaWxsPSIjZmZmIj48dGl0bGU+QXBwbHkgU3R5bGU8L3RpdGxlPjxwYXRoIGQ9Ik00ODAtMzQ4LjQ2IDYxMS41NC00ODAgNDgwLTYxMS41NCA0NTIuNDYtNTg0bDg0IDg0SDM0MHY0MGgxOTYuNDZsLTg0IDg0TDQ4MC0zNDguNDZabS4xMyAyMjguNDZxLTc0LjY3IDAtMTQwLjQxLTI4LjM0LTY1LjczLTI4LjM0LTExNC4zNi03Ni45Mi00OC42My00OC41OC03Ni45OS0xMTQuMjZRMTIwLTQwNS4xOSAxMjAtNDc5Ljg3cTAtNzQuNjcgMjguMzQtMTQwLjQxIDI4LjM0LTY1LjczIDc2LjkyLTExNC4zNiA0OC41OC00OC42MyAxMTQuMjYtNzYuOTlRNDA1LjE5LTg0MCA0NzkuODctODQwcTc0LjY3IDAgMTQwLjQxIDI4LjM0IDY1LjczIDI4LjM0IDExNC4zNiA3Ni45MiA0OC42MyA0OC41OCA3Ni45OSAxMTQuMjZRODQwLTU1NC44MSA4NDAtNDgwLjEzcTAgNzQuNjctMjguMzQgMTQwLjQxLTI4LjM0IDY1LjczLTc2LjkyIDExNC4zNi00OC41OCA0OC42My0xMTQuMjYgNzYuOTlRNTU0LjgxLTEyMCA0ODAuMTMtMTIwWm0tLjEzLTQwcTEzNCAwIDIyNy05M3Q5My0yMjdxMC0xMzQtOTMtMjI3dC0yMjctOTNxLTEzNCAwLTIyNyA5M3QtOTMgMjI3cTAgMTM0IDkzIDIyN3QyMjcgOTNabTAtMzIwWiIvPjwvc3ZnPg==" / alt="Apply Style"></button>
+      </div>
+    </template>
+    <div id="styles-list"></div>
+  </body>
+</html>

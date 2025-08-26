@@ -11,30 +11,35 @@
  * @param {GoogleAppsScript.Events.AddonOnInstall} e
  */
 function onInstall(e) {
-  // TODO initialize styles storage
-  // TODO add example styles: code, blockquote
+  // Q initialize styles storage here?
+  // Q add example styles? (code, blockquote)
   console.log("Styles installed. ", e);
-  buildAddOnMenu(e.authMode);
+  if (e.authMode === ScriptApp.AuthMode.FULL) {
+    onOpen(e);
+  }
 }
 
 /**
- * @param {ScriptApp.AuthMode}
+ * @param {GoogleAppsScript.Events.SheetsOnOpen | GoogleAppsScript.Events.DocsOnOpen | GoogleAppsScript.Events.SlidesOnOpen} e
  */
-function buildAddOnMenu(authMode) {
-  SpreadsheetApp.getUi().createAddonMenu()
-    .addItem("Hello", "doHello")
-    .addToUi();
-}
-
-function doHello() {
-  console.log("Hello from My-gStyles!");
+function onOpen(e) {
+  console.log("onOpen: ", e.source && Object.getOwnPropertyNames(e.source));
+  buildAddOnMenu();
 }
 
 /**
- * @param {HomepageEventObject} e
+ * @param {{ hostApp: "sheets" | "docs" | "slides" }} e
  * @returns {GoogleAppsScript.Card_Service.Card[]}
  */
 function onCommonHomepage(e) {
-  console.log("Styles homepage opened.");
-  return [getStylesCard()];
+  console.log("Styles homepage opened.", e);
+  if (e.hostApp.toLocaleLowerCase() === "sheets") {
+    // return onSheetsHomepage(e);
+  } else if (e.hostApp.toLocaleLowerCase() === "docs") {
+    // return onDocsHomepage(e);
+  } else if (e.hostApp.toLocaleLowerCase() === "slides") {
+    // return onSlidesHomepage(e);
+  } else {
+    console.error("Unknown host app: ", e.hostApp);
+  }
 }
