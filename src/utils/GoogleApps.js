@@ -10,6 +10,9 @@
 const GoogleApps = (function() {
 
   //#region private functions
+  /**
+   * @returns {GoogleAppsScript.Base.Ui & { name: string }}
+   */
   function getUi() {
     const allUis = {
       Sheets: () => SpreadsheetApp.getUi(),
